@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+</head>
+<body>
+  <h1>Latest News</h1>
+  <ul>
+    <% news.forEach(item => { %>
+      <li><strong><%= item.title %></strong>: <%= item.content %> (<%= item.date.toDateString() %>)</li>
+    <% }) %>
+  </ul>
+  <a href="/news/add">Add News</a>
+</body>
+</html>
